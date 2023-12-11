@@ -14,7 +14,7 @@ namespace Day1_Part2
         public PuzzleSolver(InputFromTxt Input)
         {
             this.input = Input;
-            //this.solution = this.SolvePuzzle;
+            this.SolvePuzzle();
         }
 
         public InputFromTxt Input
@@ -25,7 +25,12 @@ namespace Day1_Part2
             }
         }
 
-        private int SolvePuzzle()
+        public int Solution
+        {
+            get { return this.solution; }
+        }
+
+        private void SolvePuzzle()
         {
             foreach (string Line in this.input.Input)
             {
@@ -37,34 +42,40 @@ namespace Day1_Part2
                 {
                     if (FirstNumberFound == false)
                     {
-                        if (int.TryParse(this.input.Input[i], out int number))
+                        
+                        if (int.TryParse(Line[i].ToString(), out int number))
                         //if the string of the line is a number and the first number is not found yet
                         {
                             this.solution += number * 10;
                             FirstNumberFound = true;
+                            Console.WriteLine(number);
                         }
                         else
                         {
                             if (IsAStringANumberInLettersAsc(Line, i) != null)
                                 //if the char is the first letter of a number
                             {
-                                this.solution += (int)IsAStringANumberInLettersAsc(Line, i);
+                                this.solution += (int)IsAStringANumberInLettersAsc(Line, i) * 10;
                                 FirstNumberFound = true;
+                                Console.WriteLine((int)IsAStringANumberInLettersAsc(Line, i));
+
                             }
                         }
                     }
                 }
 
-                for (int i = Line.Length; i <= 0; i--)
+                for (int i = Line.Length-1; i >= 0; i--)
                 //for every char of the line from the end of the line
                 {
                     if (SecondNumberFound == false)
                     {
-                        if (int.TryParse(this.input.Input[i], out int number))
+                        if (int.TryParse(Line[i].ToString(), out int number))
                         //if the string of the line is a number and the first number is not found yet
                         {
-                            this.solution += number * 10;
+                            this.solution += number ;
                             SecondNumberFound = true;
+                            Console.WriteLine(number);
+
                         }
                         else
                         {
@@ -73,6 +84,8 @@ namespace Day1_Part2
                             {
                                 this.solution += (int)IsAStringANumberInLettersDes(Line, i);
                                 SecondNumberFound = true;
+                                Console.WriteLine((int)IsAStringANumberInLettersDes(Line, i));
+
                             }
                         }
                     }

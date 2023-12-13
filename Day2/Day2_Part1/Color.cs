@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day2_Part1
 {
-    public enum Colors
+    public enum Color
     {
         blue,
         red,

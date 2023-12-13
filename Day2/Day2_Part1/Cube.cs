@@ -8,6 +8,19 @@ namespace Day2_Part1
 {
     public class Cube
     {
-        
+        private Color color;
+
+        public Cube(Color color)
+        {
+            this.color = color;
+        }
+
+        public Color Color
+        {
+            get
+            {
+                return this.color;
+            }
+        }
     }
 }

@@ -1,0 +1,15 @@
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\Day2_Part1.csproj.AssemblyReference.cache
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\Day2_Part1.GeneratedMSBuildEditorConfig.editorconfig
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\Day2_Part1.AssemblyInfoInputs.cache
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\Day2_Part1.AssemblyInfo.cs
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\Day2_Part1.csproj.CoreCompileInputs.cache
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\bin\Debug\net6.0\Day2_Part1.exe
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\bin\Debug\net6.0\Day2_Part1.deps.json
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\bin\Debug\net6.0\Day2_Part1.runtimeconfig.json
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\bin\Debug\net6.0\Day2_Part1.dll
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\bin\Debug\net6.0\Day2_Part1.pdb
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\Day2_Part1.dll
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\refint\Day2_Part1.dll
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\Day2_Part1.pdb
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\Day2_Part1.genruntimeconfig.cache
+E:\Github Repositories\Games\AdventOfCode\Day2\Day2_Part1\obj\Debug\net6.0\ref\Day2_Part1.dll

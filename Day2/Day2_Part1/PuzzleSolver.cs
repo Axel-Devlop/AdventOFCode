@@ -10,6 +10,7 @@ namespace Day2_Part1
     {
         private string[] puzzleInput;
         private int solution;
+        private List<Bag> gameBags;
 
         public PuzzleSolver(string pathToPuzzleInput)
         {
@@ -18,6 +19,8 @@ namespace Day2_Part1
                 this.puzzleInput = File.ReadAllLines(pathToPuzzleInput);
 
                 this.solution = 0;
+
+                this.gameBags = new List<Bag>();
 
                 this.SolvePuzzle();
             }
@@ -38,9 +41,21 @@ namespace Day2_Part1
 
         private void SolvePuzzle()
         {
+            CreateBagsFromInput();
+        }
+
+        private void CreateBagsFromInput()
+        {
             foreach (string line in this.puzzleInput)
             {
+                string[] splitLine = line.Split(':');
 
+                string[] gameId = splitLine[0].Split(' ');
+                int bagId = int.Parse(gameId[1].ToString());
+                //The string is split twice to find the game number
+
+                string[] setsOfCubes = splitLine[1].Split(';');
+                Console.WriteLine("test");
             }
         }
     }

@@ -9,9 +9,12 @@ namespace Day2_Part1
     public class Bag
     {
         private List<Cube> cubes;
+        private int id;
 
-        public Bag(List<Cube>? cubesList)
+        public Bag(int id, List<Cube>? cubesList)
         {
+            this.id = id;
+
             if(cubesList is null)
             {
                 this.cubes = new List<Cube>();
@@ -28,6 +31,14 @@ namespace Day2_Part1
             get
             {
                 return this.cubes;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return this.id;
             }
         }
 

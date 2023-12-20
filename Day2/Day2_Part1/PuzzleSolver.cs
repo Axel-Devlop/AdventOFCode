@@ -42,6 +42,7 @@ namespace Day2_Part1
         private void SolvePuzzle()
         {
             CreateBagsFromInput();
+            Console.WriteLine(this.games);
         }
 
         private void CreateBagsFromInput()
@@ -59,11 +60,11 @@ namespace Day2_Part1
 
                 foreach (string setOfCubes in setsOfCubes)
                 {
-                    string[] rawCubes = setOfCubes.Split(',');
+                    string[] rawCubes = setOfCubes.Trim().Split(',');
 
                     foreach (string cubes in rawCubes)
                     {
-                        string[] numberAndCube = cubes.Split(' ');
+                        string[] numberAndCube = cubes.Trim().Split(' ');
                         // numberAndCube[0] is the number of cubes
                         // numberAndCube[1] is the color of the cubes
 

@@ -42,7 +42,16 @@ namespace Day2_Part1
         private void SolvePuzzle()
         {
             CreateBagsFromInput();
-            Console.WriteLine(this.games);
+            // The Elf would first like to know which games would have been possible if the bag contained only 12 red cubes, 13 green cubes, and 14 blue cubes?
+
+            foreach (Game game in this.games)
+            {
+                if(game.MaxRed <= 12 && game.MaxGreen <= 13 && game.MaxBlue <= 14)
+                {
+                    this.solution += game.Id;
+                }
+            }
+            Console.WriteLine(this.solution);
         }
 
         private void CreateBagsFromInput()

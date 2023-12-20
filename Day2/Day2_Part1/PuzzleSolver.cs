@@ -10,7 +10,7 @@ namespace Day2_Part1
     {
         private string[] puzzleInput;
         private int solution;
-        private List<Bag> gameBags;
+        private List<Game> games;
 
         public PuzzleSolver(string pathToPuzzleInput)
         {
@@ -20,7 +20,7 @@ namespace Day2_Part1
 
                 this.solution = 0;
 
-                this.gameBags = new List<Bag>();
+                this.games = new List<Game>();
 
                 this.SolvePuzzle();
             }
@@ -52,10 +52,41 @@ namespace Day2_Part1
 
                 string[] gameId = splitLine[0].Split(' ');
                 int bagId = int.Parse(gameId[1].ToString());
-                //The string is split twice to find the game number
+                //The string is split twice to find the game id
+                Game newGame = new Game(bagId);
 
                 string[] setsOfCubes = splitLine[1].Split(';');
-                Console.WriteLine("test");
+
+                foreach (string setOfCubes in setsOfCubes)
+                {
+                    string[] rawCubes = setOfCubes.Split(',');
+
+                    foreach (string cubes in rawCubes)
+                    {
+                        string[] numberAndCube = cubes.Split(' ');
+                        // numberAndCube[0] is the number of cubes
+                        // numberAndCube[1] is the color of the cubes
+
+                        switch (numberAndCube[1])
+                        {
+                            case "blue": 
+                                if (int.Parse(numberAndCube[0]) > newGame.MaxBlue) { newGame.MaxBlue = int.Parse(numberAndCube[0]); }
+                                break;
+
+                            case "red":
+                                if (int.Parse(numberAndCube[0]) > newGame.MaxRed) { newGame.MaxRed = int.Parse(numberAndCube[0]); }
+                                break;
+
+                            case "green":
+                                if (int.Parse(numberAndCube[0]) > newGame.MaxGreen) { newGame.MaxGreen = int.Parse(numberAndCube[0]); }
+                                break;
+
+                            default: throw new Exception("Invalid cube color");
+                        }
+                    }
+                }
+
+                this.games.Add(newGame);
             }
         }
     }

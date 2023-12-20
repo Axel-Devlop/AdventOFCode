@@ -8,7 +8,7 @@ namespace Day2_Part1
 {
     public enum Color
     {
-        blue,
+        blue = "blue",
         red,
         green
     }
